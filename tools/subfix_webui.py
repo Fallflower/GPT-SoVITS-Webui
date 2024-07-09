@@ -316,8 +316,10 @@ if __name__ == "__main__":
             btn_submit_change = gr.Button("Submit Text")
             btn_merge_audio = gr.Button("Merge Audio")
             btn_delete_audio = gr.Button("Delete Audio")
+
+        with gr.Row():
             btn_previous_index = gr.Button("Previous Index")
-            
+
         with gr.Row():
             index_slider = gr.Slider(
                     minimum=0, maximum=g_max_json_index, value=g_index, step=1, label="Index", scale=3
@@ -396,7 +398,7 @@ if __name__ == "__main__":
         )
 
         btn_previous_index.click(
-            b_previous_index,
+            fn=b_previous_index,
             inputs=[
                 index_slider,
                 batchsize_slider,
@@ -410,7 +412,7 @@ if __name__ == "__main__":
         )
         
         btn_next_index.click(
-            b_next_index,
+            fn=b_next_index,
             inputs=[
                 index_slider,
                 batchsize_slider,
@@ -421,6 +423,7 @@ if __name__ == "__main__":
                 *g_audio_list,
                 *g_checkbox_list
             ],
+            _js="() => window.scrollTo(0, 0)"
         )
 
         btn_delete_audio.click(
