@@ -721,7 +721,7 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
                     with gr.Row():
                         asr_inp_dir = gr.Textbox(
                             label=i18n("输入文件夹路径"),
-                            value="D:\\GPT-SoVITS\\raw\\xxx",
+                            value="output/slicer_opt",
                             interactive=True,
                         )
                         asr_opt_dir = gr.Textbox(
@@ -765,7 +765,7 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
                 if_label = gr.Checkbox(label=i18n("是否开启打标WebUI"),show_label=True)
                 path_list = gr.Textbox(
                     label=i18n(".list标注文件的路径"),
-                    value="D:\\RVC1006\\GPT-SoVITS\\raw\\xxx.list",
+                    value="output/asr_opt/slicer_opt.list",
                     interactive=True,
                 )
                 label_info = gr.Textbox(label=i18n("打标工具进程输出信息"))

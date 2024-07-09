@@ -317,7 +317,6 @@ if __name__ == "__main__":
             btn_merge_audio = gr.Button("Merge Audio")
             btn_delete_audio = gr.Button("Delete Audio")
             btn_previous_index = gr.Button("Previous Index")
-            btn_next_index = gr.Button("Next Index")
             
         with gr.Row():
             index_slider = gr.Slider(
@@ -365,6 +364,9 @@ if __name__ == "__main__":
             )
             btn_theme_dark = gr.Button("Light Theme", link="?__theme=light", scale=1)
             btn_theme_light = gr.Button("Dark Theme", link="?__theme=dark", scale=1)
+        
+        with gr.Row():
+            btn_next_index = gr.Button("Next Index")
         
         btn_change_index.click(
             b_change_index,
