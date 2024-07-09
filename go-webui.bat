@@ -1,4 +1,5 @@
 @echo off
+REM 改为你自己的conda路径以及环境名称
 call D:\ProgramData\miniconda3\Scripts\activate.bat gswebui
 
 set temp_file=cuda_check.txt
@@ -15,7 +16,8 @@ if "%cuda_available%"=="True" (
 ) else (
     echo CUDA is not available.
     REM 在此处添加CUDA不可用时要执行的命令
-    pip3 install torch torchaudio --index-url https://download.pytorch.org/whl/cu121 
+    pip install -r .\requirements.txt
+    pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121 
 )
 
 
