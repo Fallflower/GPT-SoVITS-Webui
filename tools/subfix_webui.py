@@ -349,6 +349,7 @@ if __name__ == "__main__":
                             label="Yes",
                             show_label = True,
                             info = "Choose Audio",
+                            value = True,
                             scale=1
                         )
                         g_text_list.append(text)
@@ -423,7 +424,7 @@ if __name__ == "__main__":
                 *g_audio_list,
                 *g_checkbox_list
             ],
-            _js="() => window.scrollTo(0, 0)"
+            # _js="() => window.scrollTo(0, 0)"
         )
 
         btn_delete_audio.click(
